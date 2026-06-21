@@ -1,4 +1,4 @@
-FROM python:3.11-slim [7/6 23:53] Davi Calixto: [7/6 23:50] Davi Calixto: # 🏊 Mining Pool Deployment Guide
+[7/6 23:53] Davi Calixto: [7/6 23:50] Davi Calixto: # 🏊 Mining Pool Deployment Guide
 
 Complete guide to deploy the Opus Davi **Phase 2 Mining Pool** on Mainnet.
 
@@ -2282,9 +2282,3 @@ http://localhost:8787/api/dashboard
 para ver o dashboard e rotas da API.
 Assim, você tem uma solução completa em um só arquivo para rodar localmente seu projeto base. Caso queira, posso ajudar a subir isso em repositório no GitHub, montar README.md e otimizar para deploy em proto.
 [14/6 12:37] Davi Calixto: Check out my app deployed on SnapDeploy! https://node-express-app-024a4349.containers.snapdeploy.dev/
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
-EXPOSE 5000
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
